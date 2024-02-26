@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  background: linear-gradient(to bottom, rgb(243, 243, 243), rgb(53, 87, 92), rgb(15, 14, 14));
+    align-items: center;
+    line-height: 40px;
+   text-align: center;
+   padding: 20px;
+   letter-spacing: 3px;
+}
+
+.dashboard{
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.checkmate-scenario{
+  display: none;
+  color: red;
+}
+
+.chessboard {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(8, 80px);
+    grid-template-rows: repeat(8, 80px);
+    border: 5px solid black;
+    margin: 20px 20px 20px 20px;
+    left: 10%;
+    right: 10%;
+    width: 640px;
+  }
+  .square {
+    width: 80px;
+    height: 80px;
+  }
+  .white {
+    background-color: #f0d9b5;
+  }
+  .black {
+    background-color: #b58863;
+  }
+  .piece {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    cursor: pointer;
+    /* z-index: 100; */
+  }
+  
+  /* .selected-piece{
+    background-color: #17e1ec;
+  } */
+
+  .alert-msg{
+    display: none;
+    border-radius: 10px;
+    background-color: rgb(226, 96, 16);
+    color: white;
+    padding: 5px;
+  }
+
+  .winnerboard{
+    display: none;
+    background-color: gold;
+    color: brown;
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 10px;
+    width:200px;
+    height: 100px;
+    position: absolute;
+    top:45%;
+    left: 40%;
+  }

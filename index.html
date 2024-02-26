@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/chessboard.css">
+  
+  <title>Chess Game</title>
+</head>
+<body>
+
+    <div class="dashboard">
+        <a>~ Sathuranga Vettai ~</a>
+        <div>
+          <label class="fa-regular" title="white">White's Turn</label>
+        </div>
+        <div class="checkmate-scenario">
+          <label>Checkmate !! - Move King</label>
+        </div><br>
+        <div>
+          <label class="alert-msg"></label>
+        </div>
+    </div>
+    <div class="chessboard">
+                <div class="square white" data-row="1" data-col="1" title="black"></div>
+                <div class="square black" data-row="1" data-col="2" title="black"></div>
+                <div class="square white" data-row="1" data-col="3" title="black"></div>
+                <div class="square black" data-row="1" data-col="4" title="black"></div>
+                <div class="square white" data-row="1" data-col="5" title="black"></div>
+                <div class="square black" data-row="1" data-col="6" title="black"></div>
+                <div class="square white" data-row="1" data-col="7" title="black"></div>
+                <div class="square black" data-row="1" data-col="8" title="black"></div>
+
+                <div class="square black" data-row="2" data-col="1" title="black"></div>
+                <div class="square white" data-row="2" data-col="2" title="black"></div>
+                <div class="square black" data-row="2" data-col="3" title="black"></div>
+                <div class="square white" data-row="2" data-col="4" title="black"></div>
+                <div class="square black" data-row="2" data-col="5" title="black"></div>
+                <div class="square white" data-row="2" data-col="6" title="black"></div>
+                <div class="square black" data-row="2" data-col="7" title="black"></div>
+                <div class="square white" data-row="2" data-col="8" title="black"></div>
+
+                <div class="square white" data-row="3" data-col="1" title="none"></div>
+                <div class="square black" data-row="3" data-col="2" title="none" ></div>
+                <div class="square white" data-row="3" data-col="3" title="none" ></div>
+                <div class="square black" data-row="3" data-col="4" title="none" ></div>
+                <div class="square white" data-row="3" data-col="5" title="none" ></div>
+                <div class="square black" data-row="3" data-col="6" title="none" ></div>
+                <div class="square white" data-row="3" data-col="7" title="none" ></div>
+                <div class="square black" data-row="3" data-col="8" title="none" ></div>
+
+                <div class="square black" data-row="4" data-col="1" title="none" ></div>
+                <div class="square white" data-row="4" data-col="2" title="none" ></div>
+                <div class="square black" data-row="4" data-col="3" title="none" ></div>
+                <div class="square white" data-row="4" data-col="4" title="none" ></div>
+                <div class="square black" data-row="4" data-col="5" title="none" ></div>
+                <div class="square white" data-row="4" data-col="6" title="none" ></div>
+                <div class="square black" data-row="4" data-col="7" title="none" ></div>
+                <div class="square white" data-row="4" data-col="8" title="none" ></div>
+
+                <div class="square white" data-row="5" data-col="1" title="none" ></div>
+                <div class="square black" data-row="5" data-col="2" title="none" ></div>
+                <div class="square white" data-row="5" data-col="3" title="none" ></div>
+                <div class="square black" data-row="5" data-col="4" title="none" ></div>
+                <div class="square white" data-row="5" data-col="5" title="none" ></div>
+                <div class="square black" data-row="5" data-col="6" title="none" ></div>
+                <div class="square white" data-row="5" data-col="7" title="none" ></div>
+                <div class="square black" data-row="5" data-col="8" title="none" ></div>
+
+                <div class="square black" data-row="6" data-col="1" title="none" ></div>
+                <div class="square white" data-row="6" data-col="2" title="none" ></div>
+                <div class="square black" data-row="6" data-col="3" title="none" ></div>
+                <div class="square white" data-row="6" data-col="4" title="none" ></div>
+                <div class="square black" data-row="6" data-col="5" title="none" ></div>
+                <div class="square white" data-row="6" data-col="6" title="none" ></div>
+                <div class="square black" data-row="6" data-col="7" title="none" ></div>
+                <div class="square white" data-row="6" data-col="8" title="none" ></div>
+
+                <div class="square white" data-row="7" data-col="1" title="white" ></div>
+                <div class="square black" data-row="7" data-col="2" title="white" ></div>
+                <div class="square white" data-row="7" data-col="3" title="white" ></div>
+                <div class="square black" data-row="7" data-col="4" title="white" ></div>
+                <div class="square white" data-row="7" data-col="5" title="white" ></div>
+                <div class="square black" data-row="7" data-col="6" title="white" ></div>
+                <div class="square white" data-row="7" data-col="7" title="white" ></div>
+                <div class="square black" data-row="7" data-col="8" title="white" ></div>
+
+                <div class="square black" data-row="8" data-col="1" title="white" ></div>
+                <div class="square white" data-row="8" data-col="2" title="white" ></div>
+                <div class="square black" data-row="8" data-col="3" title="white" ></div>
+                <div class="square white" data-row="8" data-col="4" title="white" ></div>
+                <div class="square black" data-row="8" data-col="5" title="white" ></div>
+                <div class="square white" data-row="8" data-col="6" title="white" ></div>
+                <div class="square black" data-row="8" data-col="7" title="white" ></div>
+                <div class="square white" data-row="8" data-col="8" title="white" ></div>
+
+                
+                <!--Black Pieces-->
+
+                <div class="piece elephant fa-solid fa-chess-rook fa-4x" style="grid-column: 1;grid-row: 1;"></div>
+                <div class="piece horse fa-solid fa-chess-knight fa-4x" style="grid-column: 2;grid-row: 1;"></div>
+                <div class="piece bishop fa-solid fa-chess-bishop fa-4x" style="grid-column: 3;grid-row: 1;"></div>
+                <div class="piece queen fa-solid fa-chess-queen fa-4x" style="grid-column: 4;grid-row: 1;"></div>
+                <div class="piece king fa-solid fa-chess-king fa-4x" style="grid-column: 5;grid-row: 1;"></div>
+                <div class="piece bishop fa-solid fa-chess-bishop fa-4x" style="grid-column: 6;grid-row: 1;"></div>
+                <div class="piece horse fa-solid fa-chess-knight fa-4x" style="grid-column: 7;grid-row: 1;"></div>
+                <div class="piece elephant fa-solid fa-chess-rook fa-4x" style="grid-column: 8;grid-row: 1;"></div>
+
+
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 1;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 2;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 3;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 4;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 5;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 6;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 7;grid-row: 2;"></div>
+                <div class="piece pawn fa-solid fa-chess-pawn fa-4x" style="grid-column: 8;grid-row: 2;"></div>
+                
+                
+
+                <!--white Pieces-->
+
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 1;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 2;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 3;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 4;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 5;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 6;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 7;grid-row: 7;"></div>
+                <div class="piece pawn fa-regular fa-chess-pawn fa-4x" style="grid-column: 8;grid-row: 7;"></div>
+
+
+                <div class="piece elephant fa-regular fa-chess-rook fa-4x" style="grid-column: 1;grid-row: 8;"></div>
+                <div class="piece horse fa-regular fa-chess-knight fa-4x" style="grid-column: 2;grid-row: 8;"></div>
+                <div class="piece bishop fa-regular fa-chess-bishop fa-4x" style="grid-column: 3;grid-row: 8;"></div>
+                <div class="piece queen fa-regular fa-chess-queen fa-4x" style="grid-column: 4;grid-row: 8;"></div>
+                <div class="piece king fa-regular fa-chess-king fa-4x" style="grid-column: 5;grid-row: 8;"></div>
+                <div class="piece bishop fa-regular fa-chess-bishop fa-4x" style="grid-column: 6;grid-row: 8;"></div>
+                <div class="piece horse fa-regular fa-chess-knight fa-4x" style="grid-column: 7;grid-row: 8;"></div>
+                <div class="piece elephant fa-regular fa-chess-rook fa-4x" style="grid-column: 8;grid-row: 8;"></div>
+                <label class="winnerboard">winnerboard</label>
+
+    </div>
+
+    
+
+  <script src="https://kit.fontawesome.com/1f7bb057c1.js" crossorigin="anonymous"></script>
+  <script src="scripts/chessgame.js"></script>
+</body>
+</html>
