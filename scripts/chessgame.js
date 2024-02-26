@@ -308,6 +308,7 @@ function moveNext(startpiece,endpoints,endpiece=`<p></p>`){
         startpiece.style.gridColumn=endsquare.dataset.col;
         endsquare.title=startsquare.title;
         startsquare.title="none";
+        console.log(endpiece);
         if(endpiece!=`<p></p>`){
             var endpiecenames=endpiece.getAttribute("class");
             endpiecenames=endpiecenames.split(" ");
