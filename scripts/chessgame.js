@@ -2,6 +2,7 @@
     const squares = document.querySelectorAll('.square');
     const playerturn=document.querySelector('.fa-regular');
     const messages=document.querySelector('.alert-msg');
+    const chessboard=document.querySelector('.chessboard');
     var selectedsquare=`<div></div>`;
     let possibleMoves=[];
     var selectedpiece=`<a></a>`;
@@ -296,8 +297,8 @@ function moveNext(startpiece,endpoints,endpiece=`<p></p>`){
   let choosenSquare=endpoints;    //piece movement
     let wrongmove=0;
   for(let possiblesquare of possibleMoves){
-    console.log("ps:"+possiblesquare);
-    console.log("cs:"+choosenSquare);
+    // console.log("ps:"+possiblesquare);
+    // console.log("cs:"+choosenSquare);
     if(choosenSquare[0] == possiblesquare[0] && choosenSquare[1]==possiblesquare[1]){
         console.log("Move on");
         var startsquare=document.querySelector(`[data-row="${startpiece.style.gridRow}"][data-col="${startpiece.style.gridColumn}"]`);
@@ -308,6 +309,7 @@ function moveNext(startpiece,endpoints,endpiece=`<p></p>`){
         startpiece.style.gridColumn=endsquare.dataset.col;
         endsquare.title=startsquare.title;
         startsquare.title="none";
+        console.log("Endpiece");
         console.log(endpiece);
         if(endpiece!=`<p></p>`){
             var endpiecenames=endpiece.getAttribute("class");
@@ -323,12 +325,22 @@ function moveNext(startpiece,endpoints,endpiece=`<p></p>`){
             playerturn.title="black";
             playerturn.setAttribute("class","fa-solid");
             playerturn.textContent="Black's turn";
+            chessboard.style.transform="rotate(180deg)";
+            pieces.forEach(piece=>{
+                piece.style.transform="rotate(180deg)";
+            })
           }
           else{
             playerturn.title="white";
             playerturn.setAttribute("class","fa-regular");
             playerturn.textContent="white's turn";
+            chessboard.style.transform="rotate(0deg)";
+            pieces.forEach(piece=>{
+                piece.style.transform="rotate(0deg)";
+            })
           }
+
+          
           wrongmove=1;
         break;
     }
