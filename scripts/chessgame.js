@@ -499,6 +499,7 @@ function gameover(winner){
     pieces.forEach(piece => {
         piece.remove();
     });
+    chessboard.style.transform="rotate(0deg)";
     // squares.addEventListener("click",function(event){
     //     event.preventDefault();
     // });

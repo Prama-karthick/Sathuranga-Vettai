@@ -1,0 +1,36 @@
+if(startsquare.title!=endsquare.title  && startsquare.title!="none" && endsquare.title!="none"){
+                    if(endsquare.title=="black"){
+                        const blackpieces=document.querySelectorAll(".fa-solid");
+                            for(let blackpiece of blackpieces){
+                                if(blackpiece.style.gridRow==choosenSquare[0] && blackpiece.style.gridColumn==choosenSquare[1]){
+                                    blackpiece.remove();
+                                    break;
+                                }
+                            }
+                    }
+                    if(endsquare.title=="white"){
+                        const whitepieces=document.querySelectorAll(".fa-regular");
+                            for(let whitepiece of whitepieces){
+                                if(whitepiece.style.gridRow==choosenSquare[0] && whitepiece.style.gridColumn==choosenSquare[1]){
+                                    whitepiece.remove();
+                                    break;
+                                }
+                            }
+                    }                    
+                
+                }
+
+
+function changePosition(startpiece,startsquare,endsquare,endpiece=`<p></p>`){
+    startpiece.style.gridRow=endsquare.dataset.row;
+    startpiece.style.gridColumn=endsquare.dataset.col;
+    endsquare.title=startsquare.title;
+    startsquare.title="none";
+    if(endpiece!=`<p></p>`){
+        endpiece.remove();
+    }
+    selectedpiece=`<a></a>`;
+    possibleMoves=[];
+}
+
+var lol="propety"+value+"....";
